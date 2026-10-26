@@ -1,0 +1,16 @@
+MED-OS PWA — INSTALLAZIONE SU iPHONE (senza Netlify e Supabase)
+
+1. Estrai lo ZIP. Sul repository GitHub PUBBLICO carica SOLO i file contenuti nella cartella, MAI backup JSON, PDF o dati personali.
+2. Vai su github.com, crea un repository pubblico chiamato med-os. Carica index.html, sw.js, manifest.webmanifest, icon-180.png, icon-192.png, icon-512.png e .nojekyll nella RADICE del repository (non caricare lo ZIP!).
+3. In Settings > Pages > Build and deployment, scegli Deploy from a branch, ramo main, cartella /(root), Save.
+4. Apri in Safari https://TUO-NOME-UTENTE.github.io/med-os/ dopo la pubblicazione.
+5. Condividi > Aggiungi alla schermata Home > attiva Apri come app > Aggiungi.
+6. Avvia dall'icona, attendi un caricamento online COMPLETO, vai su Dati e controlla Archivio locale. Crea una attività e verifica il backup.
+7. Attiva Modalità aereo (anche Wi-Fi disattivato), chiudi e riapri dall'icona MED-OS, aggiungi una attività, richiudi e riapri. Verifica che resti presente.
+
+NOTE:
+- I dati di Planner, materie e argomenti sono memorizzati LOCALMENTE nell'app installata, non nel repository GitHub.
+- La Library 1.0 salva note e riferimenti, non importa i PDF offline.
+- Non cancellare app o dati del sito senza avere prima esportato un backup. Il backup JSON non contiene PDF.
+- Per GitHub Pages gratuito il repository deve essere pubblico: NON caricare dati personali o clinici. Il codice è pubblicamente accessibile.
+- La PWA si avvia offline dopo il primo caricamento online e la corretta installazione/cache del Service Worker. Test su iOS ancora necessario.
