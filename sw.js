@@ -1,5 +1,5 @@
 // MED-OS Library 1.2.1 — offline shell; no personal data sent to the server.
-const CACHE = 'medos-shell-v1-5-folders-20261027';
+const CACHE = 'medos-shell-v1-5-1-library-ux-20261027';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './jszip.min.js'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
