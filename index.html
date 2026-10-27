@@ -3,7 +3,7 @@
 
 .chipbar{display:flex;overflow-x:auto;gap:6px;margin:12px 0;padding-bottom:2px}.chipbar button{white-space:nowrap;background:#eef3fa;color:#365070;font-size:.8rem;min-height:36px;padding:8px 11px}.chipbar button.sel{background:#3269dc;color:white}.fine{font-size:.81rem;color:#607086}.segment{display:flex;gap:8px;flex-wrap:wrap}.segment>*{flex:1}.calendar-day{border:1px solid #dae4f0;border-radius:12px;padding:10px;min-height:65px;background:white}.calendar-day b{display:block}.calendar-day.selected{border-color:#3269dc;background:#eef4ff}.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.calendar-grid .calendar-day{padding:5px 2px;min-height:49px;text-align:center;font-size:.77rem}.calendar-grid .calendar-day small{font-size:.65rem}.calendar-grid button{color:#243449}.tag{font-size:.75rem;background:#edf5fa;border-radius:8px;padding:4px 7px;color:#466079}.sectionlabel{font-weight:700;margin-top:12px}
 #reviewStats{margin-top:12px}.review-control{display:grid;gap:10px}.review-topic{padding:12px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}.review-topic .row{flex-wrap:wrap}.review-topic select{max-width:200px}.review-topic button{font-size:.82rem;padding:8px 10px}.review-topic .meta{overflow-wrap:anywhere}.progress-line{display:grid;gap:5px;margin:10px 0}.progress-line .bar{height:10px}nav{grid-template-columns:repeat(5,1fr)}nav button{font-size:.65rem}</style><style id="medos-navigation-style">
-.mnav-hub{padding:2px 0 10px}.mnav-lead{color:#66788e;font-size:.89rem;margin:0 0 15px}.mnav-grid{display:grid;gap:10px}.mnav-choice{border:1px solid #e0e7f0;background:#fff;width:100%;text-align:left;padding:15px 14px;border-radius:16px;display:flex;align-items:center;gap:12px;color:#1c2937;box-shadow:0 3px 12px #12304c08}.mnav-choice .mnav-symbol{font-size:1.45rem;width:36px;text-align:center}.mnav-choice .mnav-text{flex:1;min-width:0}.mnav-choice strong{display:block;font-size:.96rem}.mnav-choice small{display:block;font-size:.79rem;margin-top:3px;line-height:1.4}.mnav-choice .mnav-arrow{font-size:1.2rem;color:#91a2b5}.mnav-page{display:none}.mnav-page.mnav-visible{display:block}.mnav-back{padding:8px 10px;min-height:36px;background:#eaf1ff;color:#3269dc;margin:4px 0 12px}.mnav-header{padding:2px 2px 8px}.mnav-header h2{font-size:1.45rem;margin:0 0 4px}.mnav-page > .panel:first-of-type{margin-top:5px}.mnav-page .panel{box-shadow:none}.mnav-hub h2{margin:8px 2px 12px;font-size:1.6rem}
+.mnav-hub{padding:2px 0 10px}.mnav-lead{color:#66788e;font-size:.89rem;margin:0 0 15px}.mnav-grid{display:grid;gap:10px}.mnav-choice{border:1px solid #e0e7f0;background:#fff;width:100%;text-align:left;padding:15px 14px;border-radius:16px;display:flex;align-items:center;gap:12px;color:#1c2937;box-shadow:0 3px 12px #12304c08}.mnav-choice .mnav-symbol{font-size:1.45rem;width:36px;text-align:center}.mnav-choice .mnav-text{flex:1;min-width:0}.mnav-choice strong{display:block;font-size:.96rem}.mnav-choice small{display:block;font-size:.79rem;margin-top:3px;line-height:1.4}.mnav-choice .mnav-arrow{font-size:1.2rem;color:#91a2b5}.mnav-page{display:none}.mnav-page.mnav-visible{display:block}.mnav-back{position:fixed;bottom:calc(71px + env(safe-area-inset-bottom));left:16px;right:16px;z-index:6;min-height:48px;border:1px solid #cbdcf8;border-radius:14px;background:#eaf1ff;color:#285dc2;box-shadow:0 5px 18px #21375422;display:flex;align-items:center;justify-content:center;margin:0;padding:11px 14px;max-width:550px;margin-inline:auto}.mnav-page.mnav-visible{padding-bottom:74px}.mnav-back:focus-visible{outline:3px solid #2563eb;outline-offset:2px}.mnav-header{padding:2px 2px 8px}.mnav-header h2{font-size:1.45rem;margin:0 0 4px}.mnav-page > .panel:first-of-type{margin-top:5px}.mnav-page .panel{box-shadow:none}.mnav-hub h2{margin:8px 2px 12px;font-size:1.6rem}
 </style></head><body><header><div class="brand"><small>MEDICAL EDUCATION OS</small><strong>MED-OS</strong></div><span class="pill" id="storageBadge">Verifica dati…</span></header><main><div id="storageNotice" class="notice">Controllo disponibilità archivio…</div>
 <section id="home" class="tab active"><div class="panel hero"><div class="eyebrow">IL TUO SPAZIO DI STUDIO</div><h1>Organizza. Studia. Ripassa.</h1><p>Planner e Library in un solo gestionale, pensato per iPhone.</p></div><div class="grid"><div class="panel stat"><b id="countTasks">0</b><small>Attività totali</small></div><div class="panel stat"><b id="countDone">0</b><small>Completate</small></div><div class="panel stat"><b id="countTopics">0</b><small>Argomenti</small></div><div class="panel stat"><b id="countSubjects">0</b><small>Materie</small></div></div><div class="panel"><div class="row between"><h2>Da studiare</h2><button class="secondary" data-tab="planner">Apri Planner</button></div><div id="todayTasks" class="list"></div></div><div class="panel"><h2>Prossimi esami</h2><div id="homeExams" class="list"></div></div><div class="panel"><h2>Avanzamento</h2><div class="bar"><span id="progressBar" style="width:0%"></span></div><p id="progressText">Nessuna attività programmata.</p></div></section>
 <section id="planner" class="tab"><div class="panel"><h2>Planner</h2><form id="taskForm"><label class="field" for="taskSubject">Materia</label><select id="taskSubject" required></select><label class="field" for="taskTitle">Attività o argomento</label><input id="taskTitle" required maxlength="180" placeholder="Es. Cavità orale: ghiandole salivari"><label class="field" for="taskDate">Data prevista</label><input id="taskDate" type="date" required><div class="grid"><div><label class="field" for="taskMinutes">Minuti previsti</label><input id="taskMinutes" type="number" min="0" max="1440" step="5" value="60"></div><div><label class="field" for="taskPriority">Priorità</label><select id="taskPriority"><option value="normal">Normale</option><option value="high">Alta</option><option value="low">Bassa</option></select></div></div><label class="field" for="taskActual">Minuti effettivi</label><input id="taskActual" type="number" min="0" max="1440" step="5" value="0"><label class="field" for="taskTopicLink">Collega a un argomento (facoltativo)</label><select id="taskTopicLink"><option value="">Nessun collegamento</option></select><label class="field" for="taskNote">Note (facoltative)</label><textarea id="taskNote" maxlength="1500" placeholder="Obiettivo, pagine, capitoli…"></textarea><div class="row wrap" style="margin-top:14px"><button type="submit">Aggiungi attività</button><button type="button" class="secondary" data-tab="subjects">Gestisci materie</button></div></form></div><div class="panel"><h2>Esami</h2><form id="examForm"><label class="field" for="examSubject">Materia</label><select id="examSubject" required></select><label class="field" for="examDate">Data esame</label><input type="date" id="examDate" required><label class="field" for="examLabel">Denominazione (facoltativa)</label><input id="examLabel" maxlength="120" placeholder="Es. Esame orale"><button type="submit" style="margin-top:12px">Aggiungi esame</button></form><div id="examList" class="list" style="margin-top:14px"></div></div><div class="panel"><h2>Calendario</h2><div class="row between"><button type="button" class="secondary" id="calPrev">‹</button><strong id="calTitle"></strong><button type="button" class="secondary" id="calNext">›</button></div><div id="calendar" class="calendar-grid" style="margin-top:12px"></div><p class="fine" id="calInfo"></p></div><div class="panel"><div class="row between"><h2>Le tue attività</h2><select id="taskFilter" aria-label="Filtra attività" style="max-width:155px;min-height:38px"><option value="all">Tutte</option><option value="open">Da fare</option><option value="done">Completate</option></select></div><div class="chipbar" id="dateModes"><button type="button" class="sel" data-period="all">Tutte le date</button><button type="button" data-period="day">Giorno</button><button type="button" data-period="week">Settimana</button><button type="button" data-period="month">Mese</button><button type="button" data-period="overdue">Arretrate</button></div><label class="field" for="periodDate">Data di riferimento</label><input id="periodDate" type="date"><div class="row wrap" style="margin:10px 0"><span class="pill" id="plannedTotal">0 min previsti</span><span class="pill" id="actualTotal">0 min effettivi</span></div><div id="taskList" class="list"></div></div></section>
@@ -127,9 +127,9 @@ for(const [sectionId,definition] of Object.entries(routes)){
  const page=document.createElement('div');page.className='mnav-page';page.dataset.subpage=id;
  const back=document.createElement('button');back.type='button';back.className='mnav-back';back.textContent='‹ Indietro';
  const header=document.createElement('div');header.className='mnav-header';const h=document.createElement('h2');h.textContent=name;header.append(h);
- page.append(back,header);
+ page.append(header);
  for(const idx of indices){if(panels[idx])page.append(panels[idx]);}
- section.append(page);pages[id]=page;
+ page.append(back);section.append(page);pages[id]=page;
  back.addEventListener('click',()=>show(sectionId));btn.addEventListener('click',()=>show(sectionId,id));
  }
  all[sectionId]={hub,pages};
@@ -139,6 +139,34 @@ function show(sectionId,pageId){const route=all[sectionId];if(!route)return;rout
  window.scrollTo(0,0);
 }
 for(const sid of Object.keys(all))show(sid);
+// Swipe from the left edge towards the right to return to the section menu.
+// Avoid intercepting vertical scrolling, form fields, or system gestures.
+let swipeStart=null;
+document.addEventListener('touchstart',event=>{
+ swipeStart=null;
+ if(event.touches.length!==1)return;
+ const target=event.target;
+ if(target?.closest?.('input,textarea,select,[contenteditable="true"],button,a'))return;
+ const active=Object.entries(all).find(([sid])=>document.getElementById(sid)?.classList.contains('active'));
+ if(!active)return;
+ const page=Object.values(active[1].pages).find(p=>p.classList.contains('mnav-visible'));
+ if(!page||!page.contains(target))return;
+ const finger=event.touches[0];
+ if(finger.clientX>Math.min(95,window.innerWidth*.25))return;
+ swipeStart={x:finger.clientX,y:finger.clientY,section:active[0]};
+},{passive:true});
+document.addEventListener('touchend',event=>{
+ if(!swipeStart||event.changedTouches.length!==1)return;
+ const start=swipeStart;swipeStart=null;
+ const finger=event.changedTouches[0];
+ const dx=finger.clientX-start.x,dy=finger.clientY-start.y;
+ if(dx>=75&&Math.abs(dx)>Math.abs(dy)*1.6){
+  const selected=Object.values(all[start.section].pages).some(p=>p.classList.contains('mnav-visible'));
+  if(document.getElementById(start.section)?.classList.contains('active')&&selected)show(start.section);
+ }
+},{passive:true});
+document.addEventListener('touchcancel',()=>{swipeStart=null},{passive:true});
+
 // Keep the original tab navigation and existing form handlers, only change the presentation.
 document.querySelectorAll('nav button[data-tab],button[data-tab]').forEach(btn=>{
  btn.addEventListener('click',()=>{const sid=btn.dataset.tab;if(all[sid])show(sid);});
